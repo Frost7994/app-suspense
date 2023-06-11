@@ -20,6 +20,12 @@ const Dashboard = async () => {
           >
             Test
           </Link>
+          <Link
+            href="/template"
+            className="border border-slate-500 rounded-md px-3 py-2"
+          >
+            Template
+          </Link>
         </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>

@@ -1,6 +1,11 @@
 const PostList = async () => {
   const fetchDataWithDelay = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const res = await fetch(
+      "https://jsonplaceholder.typicode.com/posts?userId=3",
+      {
+        cache: "no-store",
+      }
+    );
     const data = await res.json();
 
     return new Promise((resolve) => {

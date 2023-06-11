@@ -1,7 +1,7 @@
 import { API_URL } from "@/constants";
 
 const PostList = async () => {
-  const res = await fetch(`${API_URL}/api/test`, {
+  const res = await fetch(`${API_URL}/api/test?userId=2`, {
     cache: "no-store",
   });
   const { data } = await res.json();
