@@ -9,18 +9,21 @@ const Dashboard = async () => {
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <div className="flex items-center gap-2">
           <Link
+            prefetch={false}
             href="/"
             className="border border-slate-500 rounded-md px-3 py-2"
           >
             Home
           </Link>
           <Link
+            prefetch={false}
             href="/test"
             className="border border-slate-500 rounded-md px-3 py-2"
           >
             Test
           </Link>
           <Link
+            prefetch={false}
             href="/template"
             className="border border-slate-500 rounded-md px-3 py-2"
           >
