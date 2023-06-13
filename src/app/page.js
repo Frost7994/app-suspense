@@ -1,17 +1,18 @@
-// state
-import { Suspense } from "react";
+import Link from "next/link";
 
-// components
-import Header from "./header";
-import Posts from "./posts";
+const Home = async () => {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 2000);
+  });
 
-const Home = () => {
   return (
-    <div className="p-8 flex flex-col gap-4">
-      <Header />
-      <Suspense fallback={<div>Posts Loading...</div>}>
-        <Posts />
-      </Suspense>
+    <div className="flex flex-col gap-4 p-8">
+      <h1 className="text-3xl font-medium">Home</h1>
+      <Link href="/dashboard" prefetch={false}>
+        Dashboard
+      </Link>
     </div>
   );
 };
